@@ -53,5 +53,6 @@ body{
   width: max-content;
 }
 
-
-
+.bgloader{
+  background-color: rgba(17, 25, 40, 0.9);
+}
