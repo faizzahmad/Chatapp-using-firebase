@@ -45,6 +45,9 @@ try{
 
 const handelRegister = async(e) => {
     e.preventDefault();
+   if(avatar.url === ''){
+       toast.error('Please upload an image')
+   }else{
     setLoading(true)
     const formData = new FormData(e.target);
 const {username, email, password} = Object.fromEntries(formData);
@@ -79,6 +82,7 @@ try{
 }finally{
     setLoading(false) 
 }
+   }
 }
   return (
     <div className='w-[100%] h-[100%] flex  items-center gap-24'>
